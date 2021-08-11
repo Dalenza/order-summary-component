@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    --dark-blue:hsl(223, 47%, 23%);
+    --bright-blue:hsl(245, 75%, 52%);
+    --pale-blue:hsl(225, 100%, 94%);
+    --very-pale-blue:hsl(225, 100%, 98%);
+    --desaturated-blue:hsl(224, 23%, 55%);
+}
+
+body{
+    height:100vh;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:center;
+    font-family:"Red Hat Display",sans-serif;
+    background-color:var(--pale-blue);
+    background-image:url(images/pattern-background-mobile.svg);
+    background-repeat:no-repeat;
+    
+}
+
+.flex-container{
+    width:80%;
+    max-width:360px;
+    border-radius:20px;
+    box-shadow:5px 8px 25px -7px var(--desaturated-blue);
+}
+
+.hero-image img{
+    display:block;
+    width:100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius:20px;
+}
+
+.info{
+    padding:1.5rem;
+    text-align:center;
+    background-color:white;
+    border-bottom-right-radius:20px;
+    border-bottom-left-radius: 20px;
+}
+
+.summary,
+.price{
+    margin-bottom:1.5rem;
+}
+
+.summary-h{
+    margin-bottom:1.2rem;
+    font-size:20px;
+    font-weight:900;
+    color:var(--dark-blue);
+}
+.summary-p{
+    line-height:25px;
+    font-size:17px;
+    color:var(--desaturated-blue);
+}
+
+.price{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    padding:0.75rem;
+    background-color:var(--very-pale-blue);
+    border-radius:10px;
+}
+.price img{
+    margin-right:1rem;
+}
+.price .plan{
+    margin-right:3rem;
+}
+.plan{
+    color:var(--desaturated-blue);
+    font-weight:500;
+}
+.plan h4{
+    color:black;
+    font-weight:900;
+}
+
+.change-plan{
+    display:block;
+    text-align:center;
+    font-size:14px;
+    color:var(--bright-blue);
+    font-weight:700;
+}
+.btn{
+    display:block;
+    padding:0.75rem;
+    text-align:center;
+    text-decoration:none;
+}
+
+.pay{
+    color:var(--very-pale-blue);
+    background-color:var(--bright-blue);
+    border-radius:10px;
+    box-shadow: 5px 3px 25px -7px var(--bright-blue);
+}
+
+.cancel{
+    color:var(--desaturated-blue);
+}
+
+.attribution{
+    margin-top:2rem;
+}
+
+@media (min-width:360px){
+    body{
+        background-image:url(images/pattern-background-desktop.svg);
+    }
+}
