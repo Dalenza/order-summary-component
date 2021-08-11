@@ -7,9 +7,10 @@
 html{
     --dark-blue:hsl(223, 47%, 23%);
     --bright-blue:hsl(245, 75%, 52%);
+    --less-bright-blue:hsla(245, 39%, 45%, 0.9);
     --pale-blue:hsl(225, 100%, 94%);
     --very-pale-blue:hsl(225, 100%, 98%);
-    --desaturated-blue:hsl(224, 23%, 55%);
+    --desaturated-blue:hsl(0, 0%, 52%);
 }
 
 body{
@@ -75,10 +76,12 @@ body{
 .price img{
     margin-right:1rem;
 }
-.price .plan{
-    margin-right:3rem;
+.price a:active{
+    color:var(--less-bright-blue);
+    text-decoration:none;
 }
 .plan{
+    margin-right:3rem;
     color:var(--desaturated-blue);
     font-weight:500;
 }
@@ -107,9 +110,16 @@ body{
     border-radius:10px;
     box-shadow: 5px 3px 25px -7px var(--bright-blue);
 }
+.pay:active{
+    background-color:var(--less-bright-blue);
+}
 
 .cancel{
     color:var(--desaturated-blue);
+}
+.cancel:active{
+    color:hsl(0, 1%, 16%);
+    font-weight:900;
 }
 
 .attribution{
